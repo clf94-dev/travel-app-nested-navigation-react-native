@@ -29,7 +29,7 @@ export default function HomeScreen({navigation}){
             
             <FlatList  style={{ position:'relative', top: 30, maxHeight:120}} horizontal showsHorizontalScrollIndicator='false' data={CountriesDestination} keyExtractor={item => item.index} renderItem={showCountries}/>       
             <FlatList horizontal showsHorizontalScrollIndicator='false' horizontal style={{maxHeight:370}} data={CountriesDestination[country].destinations} keyExtractor={item => item.index} renderItem={({item}) => (
-                 <TouchableOpacity onPress={() => navigation.navigate('Destination', {name: item.name, src: item.src, info: item.info})}>
+                 <TouchableOpacity onPress={() => navigation.navigate('Destination', {country: item.country, name: item.name, src: item.src, info: item.info})}>
                  <View style={styles.cardPlaces}>
                             <Image style={{width:'100%', borderRadius:10}} source={item.src} />
                             <View style={styles.text}>
@@ -44,13 +44,14 @@ export default function HomeScreen({navigation}){
                 <TouchableOpacity ><Text style={[styles.select, styles.viewall]}>View All</Text></TouchableOpacity>
             </View>   
             <FlatList horizontal showsHorizontalScrollIndicator='false' horizontal  style={{maxHeight:370}}data={CountriesDestination[country].TopDestinations} keyExtractor={item => item.name} renderItem={({item}) => (
-                 <View style={styles.cardTopDest}>
-                            <Image style={{width:150, height:150, borderRadius:10}} source={item.src} />
+               <TouchableOpacity  onPress={() => navigation.navigate('Destination', {country: item.country, name: item.name, src: item.src, info: item.info})}>
+               <View style={styles.cardTopDest}>
+                            <Image style={{width:115, height:116, borderRadius:10}} source={item.src} />
                             <View style={styles.text2}>
                                 <Text style={styles.TopDestName}>{item.name}</Text>
                                 <Text style={styles.TopDestLoc}>{item.location}</Text>
                             </View>
-                </View>
+                </View></TouchableOpacity>
             )}/>   
          </View>
         
@@ -91,7 +92,7 @@ Top: {
 header:{
     flex: 1,
     flexDirection:'row',
-    maxHeight:100
+    maxHeight:50
 },
 viewall:{
     paddingLeft: 100,
@@ -103,10 +104,12 @@ cardTopDest: {
     flexDirection:'row',
     width:300,
     padding:5,
+
     backgroundColor:'white',
     maxHeight:160,
     borderRadius:10,
-    margin:15
+    margin:12
+, marginVertical:0
 },
 TopDestName:{
     fontSize:18,
