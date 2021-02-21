@@ -29,7 +29,7 @@ export default function HomeScreen({navigation}){
             
             <FlatList  style={{ position:'relative', top: 30, maxHeight:120}} horizontal showsHorizontalScrollIndicator='false' data={CountriesDestination} keyExtractor={item => item.index} renderItem={showCountries}/>       
             <FlatList horizontal showsHorizontalScrollIndicator='false' horizontal style={{maxHeight:370}} data={CountriesDestination[country].destinations} keyExtractor={item => item.index} renderItem={({item}) => (
-                 <TouchableOpacity onPress={() => navigation.navigate('Destination')}>
+                 <TouchableOpacity onPress={() => navigation.navigate('Destination', {name: item.name, src: item.src, info: item.info})}>
                  <View style={styles.cardPlaces}>
                             <Image style={{width:'100%', borderRadius:10}} source={item.src} />
                             <View style={styles.text}>
