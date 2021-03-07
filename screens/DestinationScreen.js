@@ -5,7 +5,7 @@ export default function DestinationScreen ({route}){
 const {country,name, src, info} = route.params;
     return(
         <View style={{ flex: 1, alignItems: 'start', justifyContent: 'start', backgroundColor: 'lightgray'}}>
-           <Image style={{width:'100%', height: 300, borderBottomLeftRadius:50,borderBottomRightRadius:50}} source={src}/>
+           <Image style={{width:'100%', height: 350, borderBottomLeftRadius:50,borderBottomRightRadius:50}} source={src}/>
             <View style={styles.text}> 
             <Text style={styles.Title}>{name}</Text>
             <Text style={styles.Subtitle}>{country}</Text>

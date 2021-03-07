@@ -4,23 +4,27 @@ export const CountriesDestination = [
         country: 'Indonesia',
         destinations: [{country: 'Indonesia',
             name: 'Bali',
+            index: 0,
             location: '', 
             info: 'Exuberante isla de Indonesia con playas, surf, buceo, vida nocturna en Kuta y complejos templos hindúes',
             src: require('../assets/Bali.jpg')
         },
     {country: 'Indonesia',
+    index: 1,
             name: 'Ubud',
             location: '', 
             info: 'Ciudad alta con el Bosque de los Monos, templos hindúes, museos de arte y un abundante campo.',
             src: require('../assets/Ubud.jpg')
         },
     {country: 'Indonesia',
+    index: 2,
             name: 'Denpasar',
             location: '', 
             info: 'Capital de Bali, Indonesia, conocida por la playa Sanur, el templo Pura Blanjong y el museo de Bali.',
             src: require('../assets/Denpasar.jpg')
         },
     {country: 'Indonesia',
+    index: 3,
             name: 'Islas Gili',
             location: '', 
             info: 'Islas indonesias con arrecifes de coral, tortugas marinas en Turtle Point y un barco hundido en la playa Mentigi',
@@ -62,6 +66,7 @@ export const CountriesDestination = [
         country: 'Tailandia',
         destinations: [{
             country:'Tailandia',
+            index: 0,
             name: 'Bangkok',
             location: '', 
             info: 'Ciudad moderna de Tailandia con el Gran Palacio, Wat Phra Kaew con chapitel de oro, canales y vida nocturna',
@@ -69,6 +74,7 @@ export const CountriesDestination = [
         },
     {
         country:'Tailandia',
+        index: 1,
             name: 'Chiang Mai',
             location: '', 
             info: 'Ciudad del norte de Tailandia con templos budistas como Wat Chedi Luang, artesanías y un campo montañoso.',
@@ -76,6 +82,7 @@ export const CountriesDestination = [
         },
     {
         country:'Tailandia',
+        index: 2,
             name: 'Ko Samui',
             location: '', 
             info: 'Isla tailandesa tropical con playas , lujosos centros turísticos, fiestas nocturnas y el templo del Gran Buda.',
@@ -83,6 +90,7 @@ export const CountriesDestination = [
         },
     {
         country:'Tailandia',
+        index: 3,
             name: 'Ayutthaya',
             location: '', 
             info: 'Antigua capital con templos budistas y ruinas de palacios, un mercado flotante y un santuario de elefantes.',
@@ -124,6 +132,7 @@ export const CountriesDestination = [
         country: 'China',
         destinations: [{
             country:'China',
+            index: 0,
             name: 'Pekín',
             location: '', 
             info: 'Capital de China con el complejo del palacio de la Ciudad Prohibida y la plaza de Tiananmén.',
@@ -132,12 +141,14 @@ export const CountriesDestination = [
     {
         country:'China',
             name: 'Shanghái',
+            index: 1,
             location: '', 
             info: 'Ciudad china moderna con rascacielos, el paseo costero Bund, edificios art deco y comercio.',
             src: require('../assets/Shanghai.jpg')
         },
     {
         country:'China',
+        index: 2,
             name: "Xi'an",
             location: '', 
             info: 'Capital de una antigua dinastía china con la Gran Pagoda del Ganso Salvaje y el Ejército de Terracota',
@@ -145,6 +156,7 @@ export const CountriesDestination = [
         },
     {
         country:'China',
+        index: 3,
             name: 'Chengdu',
             location: '', 
             info: 'Capital de Sichuan con una gastronomía picante,artefactos del Museo Jinsha y el centro de pandas gigantes.',
@@ -186,6 +198,7 @@ export const CountriesDestination = [
         country: 'Canadá',
         destinations: [{
             country:'Canadá',
+            index: 0,
             name: 'Toronto',
             location: '', 
             info: 'Gran ciudad canadiense con la Torre CN, muchos parques, un extenso barrio chino y el museo Real de Ontario.',
@@ -194,6 +207,7 @@ export const CountriesDestination = [
     {
         country:'Canadá',
             name: 'Vancouver',
+            index: 1,
             location: '', 
             info: 'Moderna ciudad costera con la histórica isla Granville, playas, el puente colgante Capilano y Parque Stanley.',
             src: require('../assets/Vancouver.jpg')
@@ -201,6 +215,7 @@ export const CountriesDestination = [
     {
         country:'Canadá',
             name: 'Montreal',
+            index: 2,
             location: '', 
             info: 'Ciudad canadiense conocida por Vieaux-Montréal, la Basílica de Notre-Dame y el Jardín Botánico de Montreal.',
             src: require('../assets/Montreal.jpg')
@@ -208,6 +223,7 @@ export const CountriesDestination = [
     {
         country:'Canadá',
             name: 'Quebec',
+            index: 3,
             location: '', 
             info: 'Ciudad de Canadá con Chateau Frontenac, Hotel de Glace (hotel de hielo estacional) y un carnaval de invierno.',
             src: require('../assets/Quebec.jpg')
@@ -248,6 +264,7 @@ export const CountriesDestination = [
         country: 'Australia',
         destinations: [{
             country:'Australia',
+            index: 0,
             name: 'Sídney',
             location: '', 
             info: 'Capital estatal de Nueva Gales de Sur famosa por la Casa de la Opera de Sidney y el surf en Bondi Beach.',
@@ -256,6 +273,7 @@ export const CountriesDestination = [
     {
         country:'Australia',
             name: 'Melbourne',
+            index: 1,
             location: '', 
             info: 'Capital de estado australiana, con arquitectura del siglo XIX, el Real Jardín Botánico e institutos de arte.',
             src: require('../assets/Melbourne.jpg')
@@ -263,6 +281,7 @@ export const CountriesDestination = [
     {
         country:'Australia',
             name: 'Gold Coast',
+            index: 2,
             location: '', 
             info: 'Área urbana de Australia con las playas para el surf como Snapper Rocks, parques temáticos y canales.',
             src: require('../assets/GoldCoast.jpg')
@@ -270,6 +289,7 @@ export const CountriesDestination = [
     {
         country:'Australia',
             name: 'Montañas Azules',
+            index: 3,
             location: '', 
             info: 'Retiro montañoso al oeste de Sídney, con valles empinados y la formación de arenisca Tres Hermanas.',
             src: require('../assets/MontanasAzules.jpg')
@@ -310,6 +330,7 @@ export const CountriesDestination = [
         country: 'Japón',
         destinations: [{
             country:'Japón',
+            index: 0,
             name: 'Tokio',
             location: '', 
             info: 'Capital de Japón con rascacielos, museos, el palacio Imperial y el santuario Meiji, un templo sintoísta.',
@@ -318,12 +339,14 @@ export const CountriesDestination = [
     {
         country:'Japón',
             name: 'Kioto',
+            index: 1,
             location: '', 
             info: 'Antigua capital japonesa con templos budistas, santuarios sintoístas, el castillo de Nijō y geishas en Gion.',
             src: require('../assets/Kioto.jpg')
         },
     {
         country:'Japón',
+        index: 2,
             name: 'Osaka',
             location: '', 
             info: 'Moderna ciudad portuaria de Japón famosa por su animada vida nocturna, restaurantes y el castillo de Osaka.',
@@ -331,6 +354,7 @@ export const CountriesDestination = [
         },
     {
         country:'Japón',
+        index: 3,
             name: 'Nara',
             location: '', 
             info: 'Capital de Japón en el s. VIII con templos de la época como el Tōdai-ji, famoso por su Buda de bronce de 15 m.' ,
@@ -373,6 +397,7 @@ export const CountriesDestination = [
         country: 'Corea del Sur',
         destinations: [{
             country:'Corea del Sur',
+            index: 0,
             name: 'Seúl',
             location: '', 
             info: 'Palacio, museo de arte, compras y casino',
@@ -380,6 +405,7 @@ export const CountriesDestination = [
         },
     {
         country:'Corea del Sur',
+        index: 1,
             name: 'Busán',
             location: '', 
             info: 'Ciudad portuaria surcoreana conocida por la playa de Haeundae, el templo Beomeosa y la montaña Geumjeongsan.',
@@ -387,6 +413,7 @@ export const CountriesDestination = [
         },
     {
         country:'Corea del Sur',
+        index: 2,
             name: 'Jeju',
             location: '', 
             info: 'Provincia insular de Corea del Sur con el monte Hallasan, tubos de lava, playas y parques temáticos.',
@@ -394,6 +421,7 @@ export const CountriesDestination = [
         },
     {
         country:'Corea del Sur',
+        index: 3,
             name: 'Gyeongju',
             location: '', 
             info: 'Ciudad surcoreana con la gruta de Seokguram y sitios históricos de la dinastía Silla, como el templo Bulguksa.',

@@ -1,34 +1,50 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 
 import {View, Text,Image, FlatList, TouchableOpacity, StyleSheet} from 'react-native';
-import {CountriesDestination} from './CountriesDestination'
+import {CountriesDestination} from './CountriesDestination';
+//import {InfoDestinations} from './InfoDestinations';
 
 
 export default function HomeScreen({navigation}){
     const [country, setCountry] = useState(0);
+    const flatlistRef = useRef();
+    //const [continent, setContinent] = useState(0); 
+    const onPressFunction = () => {
+    flatlistRef.current.scrollToIndex({index: 0});
+  };
     const countrySel = (countryInd) =>{
         return( 
             console.log(countryInd),
-            setCountry(countryInd)
+            setCountry(countryInd),
+            onPressFunction()
 
             )
-      
    }
+  
+/*    const continentSel = (continentInd) =>{
+    return( 
+        console.log(continentInd),
+        setCountry(continentInd)
+
+        )
+}
+   const showContinents =({item}) =>{
+    return(
+        <TouchableOpacity key={item.index} style={styles.CountryButton} onPress={() => continentSel(item.index)}><Text style={[styles.button, country == item.index && styles.select]}>{item.country}</Text></TouchableOpacity>
+        )
+} */
     const showCountries =({item}) =>{
-        
         return(
-            
             <TouchableOpacity key={item.index} style={styles.CountryButton} onPress={() => countrySel(item.index)}><Text style={[styles.button, country == item.index && styles.select]}>{item.country}</Text></TouchableOpacity>
-        
             )
     }
 
     return(
         
         <View style={{ flex: 1, alignItems: 'start', justifyContent: 'start', paddingTop: 70 , paddingLeft:20, backgroundColor: 'lightgray'}}>
-            
-            <FlatList  style={{ position:'relative', top: 30, maxHeight:120}} horizontal showsHorizontalScrollIndicator='false' data={CountriesDestination} keyExtractor={item => item.index} renderItem={showCountries}/>       
-            <FlatList horizontal showsHorizontalScrollIndicator='false' horizontal style={{maxHeight:370}} data={CountriesDestination[country].destinations} keyExtractor={item => item.index} renderItem={({item}) => (
+           {/*  <FlatList  style={{  maxHeight:50}} horizontal showsHorizontalScrollIndicator='false' data={InfoDestinations} keyExtractor={item => item.index} renderItem={showContinents}/>       */} 
+            <FlatList  style={{  maxHeight:80}} horizontal showsHorizontalScrollIndicator='false' data={CountriesDestination} keyExtractor={item => item.index} renderItem={showCountries}/>       
+            <FlatList ref={flatlistRef} horizontal showsHorizontalScrollIndicator='false' horizontal style={{maxHeight:370}} data={CountriesDestination[country].destinations} keyExtractor={item => item.index} renderItem={({item}) => (
                  <TouchableOpacity onPress={() => navigation.navigate('Destination', {country: item.country, name: item.name, src: item.src, info: item.info})}>
                  <View style={styles.cardPlaces}>
                             <Image style={{width:'100%', borderRadius:10}} source={item.src} />
@@ -43,10 +59,10 @@ export default function HomeScreen({navigation}){
                 <Text style={styles.Top}>Top Destinations</Text>
                 <TouchableOpacity ><Text style={[styles.select, styles.viewall]}>View All</Text></TouchableOpacity>
             </View>   
-            <FlatList horizontal showsHorizontalScrollIndicator='false' horizontal  style={{maxHeight:370}}data={CountriesDestination[country].TopDestinations} keyExtractor={item => item.name} renderItem={({item}) => (
+            <FlatList ref={flatlistRef} horizontal showsHorizontalScrollIndicator='false' horizontal  style={{maxHeight:370}}data={CountriesDestination[country].TopDestinations} keyExtractor={item => item.name} renderItem={({item}) => (
                <TouchableOpacity  onPress={() => navigation.navigate('Destination', {country: item.country, name: item.name, src: item.src, info: item.info})}>
                <View style={styles.cardTopDest}>
-                            <Image style={{width:115, height:116, borderRadius:10}} source={item.src} />
+                            <Image style={{width:140, height:140, borderRadius:10}} source={item.src} />
                             <View style={styles.text2}>
                                 <Text style={styles.TopDestName}>{item.name}</Text>
                                 <Text style={styles.TopDestLoc}>{item.location}</Text>
@@ -106,7 +122,7 @@ cardTopDest: {
     padding:5,
 
     backgroundColor:'white',
-    maxHeight:160,
+    maxHeight:150,
     borderRadius:10,
     margin:12
 , marginVertical:0
